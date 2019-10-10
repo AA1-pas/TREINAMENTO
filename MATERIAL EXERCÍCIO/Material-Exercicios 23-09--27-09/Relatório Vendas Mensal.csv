@@ -1,0 +1,11 @@
+Id;Modelo;Quantidade;Valor;Data de Venda
+18;Sed Nec Corp.;2;R$ 8.421,00;05/05/2019
+39;Cubilia Curae Corp.;7;R$ 8.421,00;26/05/2019
+92;Lobortis Institute;8;R$ 511,00;27/05/2019
+100;Mauris Ltd;18;R$ 8.974,00;16/05/2019
+
+O valor total das vendas no mes e de : 241409
+A media por dia de venda (dividido pela quantidade de registros) : 60352,25
+A media por dia (dividido por 30 dias) : 8046,96666666667
+
+
