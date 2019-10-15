@@ -1,50 +1,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <script>
+        function formatar(mascara, documento){
+          var i = documento.value.length;
+          var saida = mascara.substring(0,1);
+          var texto = mascara.substring(i)
+
+          if (texto.substring(0,1) != saida){
+                    documento.value += texto.substring(0,1);
+          }
+
+        }
+    </script>
+
     <title>Login</title>
     <style>
         body {
+            background-image:url('https://cdn.pixabay.com/photo/2018/10/22/19/10/nature-3766066_960_720.jpg');
+            background-repeat:no-repeat;
+            background-size:cover;
             text-align-last: center;
             position: absolute;
-            margin-left: 35%;
-            margin-top: 20%;
+            margin-left: 32%;
+            margin-top: 16%;
         }
 
         #tela {
             width: 12cm;
             height: 7cm;
             box-shadow: 13px 15px 20px 7px #000;
-            background-color: #ffffff7a;
-            background-color: beige;
-         
+            border-radius: 20px;
+ 
+            background-color: #f3e8c7;
+           
+            
         }
 
-        .div-select {    width:460px;  /* Tamanho final do select */    
-                         overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */} 
-       
+
         #campos {
             text-align: justify;
             color: darkslategray;
         }
+
     </style>
 </head>
 <body>
     <div id="tela">
-        <h1 style="color:darkslategrey">Formulário de Cadastro</h1><br>
+        <h1 style="color:darkslategrey">Formulário de Cadastro</h1>
         <div id="campos">
             <b>Nome:</b> <input type="text" name="textoNome" id="textoNome" placeholder="Digite seu nome"style="width:300px" /><br><br>
             <b>Nacionalidade:</b> <input type="text" name="textoNacionalidade" id="textoNacionalidade" placeholder="Digite sua nacionalidade" />
             <b>Idade:</b> <input type="text" name="textoIdade" id="textoIdade" placeholder="00" style="width:30px"/><br><br>
-            <div class="div-select">
-                <b>Sexo:</b>
-                <select>
-                    <option>Selecione</option>
-                    <option>Masculino</option>
-                    <option>Feminino</option>
-                </select>
-            <b>Data Nascimento:</b> <input type="text" name="textoDataNasc" id="textoDataNasc" placeholder="dd/mm/aaaa" style="width:100px"/><br><br>
-            <b>CPF:</b> <input type="text" name="textoCPF" id="textoCPF" placeholder="Digite seu CPF"style="width:315px" pattern="^\([1-9]{2}\)[0-9]{4}\-[0-9]{4}$"/><br><br>
-            <input type="text" class="form-control" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10" autocomplete="off">
-            <input type="button" name="btentrar" id="btentrar" value="Entrar" style="width:120"/>
+            <b>Sexo:</b>
+            <select style="overflow: hidden; width:90px">
+                <option>Selecione</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+            </select>
+                <b>Data Nascimento:</b> <input type="text" name="datanascimento" placeholder="dd/mm/aaaa" style="width:90px" maxlength="10" OnKeyPress="formatar('##/##/####', this)"><br><br>
+                <b>CPF:</b><input type="text" name="cpf" maxlength="14" placeholder="Digite seu CPF" style="width:315px" OnKeyPress="formatar('###.###.###-##', this)"><br><br>
+                
+                <b><input type="button" name="btentrar" id="btentrar" value="Enviar" style="width:120px; height:35px; border-radius:10px; border-bottom-width:2px;border-color:brown"/></b>
+             
         </div>
     </div>
 </body>
