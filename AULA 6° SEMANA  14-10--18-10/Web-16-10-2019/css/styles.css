@@ -1,0 +1,11 @@
+.card {
+    margin: 20%; /* Added */
+    float: none; /* Added */
+    margin-bottom: 0px; /* Added */
+    background-color: #00000073;
+}
+body {
+    background-image: url('https://assets.xtechcommerce.com/uploads/images/medium/2f24d6ed1feedc4cc29508756961da01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

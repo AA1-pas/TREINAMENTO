@@ -1,0 +1,11 @@
+.card {
+    margin: 20%; /* Added */
+    float: none; /* Added */
+    margin-bottom: 0px; /* Added */
+    background-color: #00000073;
+}
+body {
+    background-image: url('https://simpatias.com.br/wp-content/uploads/2018/07/sonhar-com-moedas.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
