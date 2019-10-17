@@ -13,12 +13,14 @@ $(document).ready(
                 thousands: '.',
                 decimal: ','
             });
-        })
-      
+        })     
       
         /*$('input[name="moedaent"]').mask("R$ 000,00");*/
     }
 );
+
+
+
 
 $(document).ready(
     function () {
