@@ -3,8 +3,9 @@ $(document).ready(
         $('input[name = "btnconverter"]').click(function () {
             var valordolar = 4.16;
             var valoreal = $('input[name=valoreal]').val();
-            var convercao = valoreal / valordolar;
+            var convercao = (valoreal / valordolar).toLocaleString('en-Us', { minimumFractionDigits: 0, currency: 'USD' });
             $('input[name=valordolar]').val(convercao);
+      
  
         });
     });
@@ -15,3 +16,4 @@ $(document).on('keypress', function (e) {
         $('input[name = "btnconverter"]').click();
     }
 });
+

@@ -26,19 +26,30 @@ $(document).ready(
     function () {
         $('input[type="button"]').click(
             function () {
-                var variavel = $('input[name="moedaent"]').val().replace("R$ ", "").replace(".", "");
-                var tvalormoeda = $('input[name="valormoeda"]').val().replace("R$ ", "").replace(".", "");
-                var valor = parseFloat(variavel) / parseFloat(tvalormoeda); 
-                CurrencyFormat(valor);
+                var url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao=%2710-16-2019%27&$top=100&$format=json";
+          
+                $.getJSON(url, function (data) {
+
+                    var valormoeda = data.value[0].cotacaoVenda;
+                    var valorreal = $('input[name="moedaent"]').maskMoney('unmasked')[0];
+                    var valorconv = parseFloat(valorreal) / valormoeda;
+
+                    var dolarrmask = new Number(valorconv).toLocaleString("eng", {
+                        style: "currency",
+                        currency: "USD"
+                    });
+
+                    var moedamask = new Number(valormoeda).toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL"
+
+                    });
+              
+                    $('input[name="moedasaida"]').val(dolarrmask);
+                    $('input[name="valormoeda"]').val(moedamask);
+
+                });
             }
         );
     }
 );
-
-function CurrencyFormat(value) {
-    var teste = new Number(value).toLocaleString("eng", {
-        style: "currency",
-        currency: "USD"
-    });
-    return $('input[name="moedasaida"]').val(teste);
-}
