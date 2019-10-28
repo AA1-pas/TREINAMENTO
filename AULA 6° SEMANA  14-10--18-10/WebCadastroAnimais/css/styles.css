@@ -1,6 +1,16 @@
 body {
     height: 100vh;
-    background-image: url('https://ichef.bbci.co.uk/news/660/cpsprodpb/1438B/production/_102672828_hi048321534-1.jpg');
+    background-image: url('http://www.petcidade.com.br/wp-content/uploads/2015/12/funny-gif-pug-eating-broccoli.gif');
     background-size: cover;
     background-repeat: no-repeat;
+}
+.card {
+   background-color: #827979bf;
+}
+div[id="titulocard"] {
+    text-align-last:center;
+}
+
+div[id="margembotoes"] {
+    margin-left:0%;
 }

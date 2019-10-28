@@ -1,0 +1,15 @@
+Dica questão dois master: Devemos executar este comando no console do NuGet
+
+Install-Package Microsoft.AspNet.WebApi.Cors
+
+Dicas para questão 2:
+
+No arquivo "WebApiConfig" vamos adicionar uma configuração para liberar o acesso 
+
+ segue o comando que libera o acesso a nossa APIWEB  "config.EnableCors();"
+
+e em nossa controller devemos habilitar os metodos para o acesso com a seguinte notação
+
+[EnableCors(origins: "*", headers: "*", methods: "*")]   com este comando anterior  liberamos para todos os sites 
+
+se conectar em nossa api	

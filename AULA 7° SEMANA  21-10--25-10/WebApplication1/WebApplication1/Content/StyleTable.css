@@ -1,0 +1,20 @@
+﻿.table tr {
+    cursor: pointer;
+}
+
+.hiddenRow {
+    padding: 0 4px !important;
+    background-color: #eeeeee;
+    font-size: 13px;
+}
+
+
+.select,
+#locale {
+    width: 100%;
+}
+
+.like {
+    margin-right: 10px;
+}
+

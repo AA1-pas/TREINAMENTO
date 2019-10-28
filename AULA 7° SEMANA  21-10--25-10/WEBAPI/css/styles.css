@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    background-image: url('https://a6853a8c66b53328.cdn.gocache.net/images/portfolio/pr-image-3t.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div[id="1campo"]{
+    margin-top:10px;
+}
+div[id="cabecalhocard"]{
+    text-align-last:center;
+}
+.card {
+    background-color: #8077777a;
+}
+input[id="cep"]{
+   mask:"00000-000";
+}

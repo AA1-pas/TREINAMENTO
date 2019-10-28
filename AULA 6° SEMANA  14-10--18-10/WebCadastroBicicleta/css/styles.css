@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+    background-image: url('https://media2.giphy.com/media/l3vR4Nfdli0jnmF8c/giphy.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card {
+    background-color: #62656e54;
+}
+div[id="titulocard"] {
+    text-align-last:center;
+}
+
+div[id="botoes"] {
+    margin-left:0%;
+}

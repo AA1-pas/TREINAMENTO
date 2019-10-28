@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/Style.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div class="container-fluid h-100">
+        <!-- Aqui temos nossa primeira linha do site -->
+        <div class="row d-flex align-content-center justify-content-center h-100">
+            <!-- Aqui crio o separador "div" e sinalizo que o mesmo ir� -->
+            <!-- Usar apenas 3/12 de nossa area total disponivel -->
+            <div class="col-md-3">
+                <table class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Altura</th>
+                            <th scope="col">IMC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="linha"></tbody>
+                </table>
+            </div>
+
+            <div class="col-md-3">
+                <form name="formenviar" method="get">
+                    <div class="row">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Id:</span>
+                            </div>
+                            <input type="number" class="form-control" name="id" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Nome:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nome" placeholder="Informe seu nome" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Altura:</span>
+                            </div>
+                            <input type="number" class="form-control" name="altura" placeholder="Informe sua altura" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Peso:</span>
+                            </div>
+                            <input type="number" class="form-control" name="peso" placeholder="Informe seu peso" />
+                        </div>
+                    </div>
+                </form>
+                <button type="button" class="w-100 btn btn-primary form-group" data-toggle="modal" id="get" data-target="#modalExemplo">
+                    Resultado GET
+                </button>
+                <button type="button" class="w-100 btn btn-success form-group" data-toggle="modal" id="post" data-target="#modalExemplo">
+                    Resultado POST
+                </button>
+                <button type="button" class="w-100 btn btn-success form-group" data-toggle="modal" id="put" data-target="#modalExemplo">
+                    Salvar
+                </button>
+                <button type="button" class="w-100 btn btn-success form-group" data-toggle="modal" id="atl" data-target="#modalExemplo">
+                    Atualizar
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="Scripts/popper.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/js/Script.js"></script>
+</body>
+</html>
